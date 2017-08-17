@@ -7,10 +7,6 @@ Sub Delimit()
     ActiveSheet.Paste
     Range("B1").Select
 End Sub
-' Test comment
-' test comment 2
-' test comment 4
-
 
 
 Sub Fill_Blank_Cells()
