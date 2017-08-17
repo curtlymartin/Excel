@@ -216,22 +216,3 @@ Sub Clear_Range_End()
 '
     ActiveWorkbook.Save
 End Sub
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
