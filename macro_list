@@ -76,6 +76,8 @@ End Sub
 
 
 Sub SelectAdjacentCol()
+' Select empty cells vertically next to partially filled column
+' Keyboard Shortcut: Ctrl+m
 
     Dim rAdjacent As Range
 
@@ -97,9 +99,7 @@ End Sub
 
 
 Sub format()
-'
 ' format Macro
-'
 ' Keyboard Shortcut: Ctrl+w
 '
     Range(Selection, ActiveCell.SpecialCells(xlLastCell)).Select
@@ -136,7 +136,7 @@ End Sub
 Sub Adjust_cols()
 '
 ' Adjust_cols Macro
-'
+' Selects all columns with content and resizes to longest content
 ' Keyboard Shortcut: Ctrl+j
 '
     Range(Selection, ActiveCell.SpecialCells(xlLastCell)).Select
@@ -152,9 +152,7 @@ End Sub
 
 
 Sub Header()
-'
-' Header Macro
-'
+' Header Macro'
 ' Keyboard Shortcut: Ctrl+h
 '
     Range(Selection, Selection.End(xlToRight)).Select
@@ -202,7 +200,6 @@ Sub delete_sheet()
 '
 ' delete_sheet Macro
 ' deletes current sheet
-'
 ' Keyboard Shortcut: Ctrl+g
 '
     ActiveWindow.SelectedSheets.Delete
@@ -211,7 +208,6 @@ End Sub
 Sub Clear_Range_End()
 '
 ' Clear_Range_End Macro
-'
 ' Keyboard Shortcut: Ctrl+k
 '
     ActiveWorkbook.Save
