@@ -1,28 +1,23 @@
 Sub Delimit()
-'
 ' Delimit Macro
-'
 
-'
     ActiveSheet.Paste
     Range("B1").Select
 End Sub
 
 
 Sub Fill_Blank_Cells()
+'Can't really remember - probably fills blank cells!
+
 Selection.SpecialCells(xlCellTypeBlanks).Select
 Selection.FormulaR1C1 = "=R[-1]C"
 End Sub
 
 
-
-
 Sub Format_PTFields()
 'Macro goal: allow users to quickly choose the format to apply to pivot table fields
-
 'Code modified from Dick Kusleika's code at:
 'http://www.dailydoseofexcel.com/archives/2010/06/18/formatting-pivot-tables/
-
 
     Dim pf As PivotField
     Dim FormatChoice As String 'allows you to dynamically select the format
@@ -31,7 +26,6 @@ Sub Format_PTFields()
     On Error GoTo HandleErr
 
     If TypeName(Selection) = "Range" Then Set pf = ActiveCell.PivotField
-
 
     'Consolidates the question blurb to a variable
    QuestionString = "Apply which format to this pivot field?" & vbCrLf & _
@@ -73,8 +67,6 @@ HandleErr:
 
 End Sub
 
-
-
 Sub SelectAdjacentCol()
 ' Select empty cells vertically next to partially filled column
 ' Keyboard Shortcut: Ctrl+m
@@ -101,7 +93,7 @@ End Sub
 Sub format()
 ' format Macro
 ' Keyboard Shortcut: Ctrl+w
-'
+
     Range(Selection, ActiveCell.SpecialCells(xlLastCell)).Select
     Range(Selection, ActiveCell.SpecialCells(xlLastCell)).Select
     With Selection.Font
@@ -134,11 +126,10 @@ End Sub
 
 
 Sub Adjust_cols()
-'
 ' Adjust_cols Macro
 ' Selects all columns with content and resizes to longest content
 ' Keyboard Shortcut: Ctrl+j
-'
+
     Range(Selection, ActiveCell.SpecialCells(xlLastCell)).Select
     ActiveCell.Columns("A:A").EntireColumn.EntireColumn.AutoFit
     Range("A1").Select
@@ -149,12 +140,10 @@ Sub Adjust_cols()
     Range("A1").Select
 End Sub
 
-
-
 Sub Header()
 ' Header Macro'
 ' Keyboard Shortcut: Ctrl+h
-'
+
     Range(Selection, Selection.End(xlToRight)).Select
     Range(Selection, Selection.End(xlToRight)).Select
     Range(Selection, Selection.End(xlToRight)).Select
@@ -197,18 +186,16 @@ Sub Header()
 End Sub
 
 Sub delete_sheet()
-'
 ' delete_sheet Macro
 ' deletes current sheet
 ' Keyboard Shortcut: Ctrl+g
-'
+
     ActiveWindow.SelectedSheets.Delete
 End Sub
 
 Sub Clear_Range_End()
-'
 ' Clear_Range_End Macro
 ' Keyboard Shortcut: Ctrl+k
-'
+
     ActiveWorkbook.Save
 End Sub
