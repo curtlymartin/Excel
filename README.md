@@ -1,12 +1,8 @@
-# Excel
- Excel macros I find useful
+# welcome to my Excel Macro Page
+ It's just some Excel macros I find useful
 
 Copy and Paste into a new module in VB
-## Welcome to GitHub Pages
 
-You can use the [editor on GitHub](https://github.com/curtlymartin/Excel/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
-
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
 
 ### Markdown
 
@@ -27,7 +23,7 @@ Syntax highlighted code block
 
 **Bold** and _Italic_ and `Code` text
 
-[Link](url) and ![Image](src)
+[Link](https://github.com/curtlymartin/Excel/blob/master/macro_list.vb) and ![Image](src)
 ```
 
 For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
