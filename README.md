@@ -23,11 +23,11 @@ Syntax highlighted code block
 
 **Bold** and _Italic_ and `Code` text
 
-[Link](https://github.com/curtlymartin/Excel/blob/master/macro_list.vb) and ![Image](src)
+[Curt's macros](https://github.com/curtlymartin/Excel/blob/master/macro_list.vb) and ![Image](src)
 ```
 
 For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-https://github.com/curtlymartin/Excel/blob/master/macro_list.vb
+[Curt's macros](https://github.com/curtlymartin/Excel/blob/master/macro_list.vb).
 
 
 ### Jekyll Themes
