@@ -63,7 +63,7 @@ End Sub
 'Selects all empty rows of adjacent column. Handy when there's no endpoint to a column in order to do an easy autofill
 Sub SelectAdjacentCol()
 ' Keyboard Shortcut: Ctrl+m
-Application.OnKey "^m", "SelectAdjacentCol"
+'Application.OnKey "^m", "SelectAdjacentCol"
     Dim rAdjacent As Range
 
     If TypeName(Selection) = "Range" Then
@@ -86,7 +86,7 @@ End Sub
 Sub format()
 ' format Macro - sets font and size to be same for whole sheet
 ' Keyboard Shortcut: Ctrl+w
-Application.OnKey "^w", "format"
+'Application.OnKey "^w", "format"
     Range(Selection, ActiveCell.SpecialCells(xlLastCell)).Select
     Range(Selection, ActiveCell.SpecialCells(xlLastCell)).Select
     With Selection.Font
@@ -121,7 +121,7 @@ End Sub
 Sub Adjust_cols()
 ' Adjust_cols Macro - sets column to size of max text
 ' Keyboard Shortcut: Ctrl+j
-Application.OnKey "^j", "Adjust_cols"
+'Application.OnKey "^j", "Adjust_cols"
 
     Range(Selection, ActiveCell.SpecialCells(xlLastCell)).Select
     ActiveCell.Columns("A:A").EntireColumn.EntireColumn.AutoFit
@@ -138,8 +138,7 @@ End Sub
 Sub Header()
 ' Header Macro - sets header row to slighter larger font. White font on black background.
 ' Keyboard Shortcut: Ctrl+h
-Application.OnKey "^h", "Header"
-
+'Application.OnKey "^h", "Header"
     Range(Selection, Selection.End(xlToRight)).Select
     Range(Selection, Selection.End(xlToRight)).Select
     Range(Selection, Selection.End(xlToRight)).Select
@@ -179,21 +178,28 @@ Application.OnKey "^h", "Header"
     End With
     Selection.Columns.AutoFit
     Selection.End(xlToLeft).Select
+    
 End Sub
 
 Sub delete_sheet()
 ' deletes current sheet
-' Keyboard Shortcut: Ctrl+g
-Application.OnKey "^g", "delete_sheet"
     ActiveWindow.SelectedSheets.Delete
+' Keyboard Shortcut: Ctrl+g
+    'Application.OnKey "^g", "delete_sheet"
 End Sub
 
 Sub Clear_Range_End()
-'' Clear_Range_End Macro - finds end of range and resets it to current last row of actual data.
+' Clear_Range_End Macro - finds end of range and resets it to current last row of actual data.
 ' Keyboard Shortcut: Ctrl+k
-Application.OnKey "^k", "Clear_Range_End"
+'Application.OnKey "^k", "Clear_Range_End"
+    ActiveSheet.UsedRange
     ActiveWorkbook.Save
 End Sub
 
-
-
+Private Sub Shortcuts()
+    Application.OnKey "^m", "SelectAdjacentCol"
+    Application.OnKey "^k", "Clear_Range_End"
+    Application.OnKey "^h", "Header"
+    Application.OnKey "^j", "Adjust_cols"
+    Application.OnKey "^w", "format"
+End Sub
