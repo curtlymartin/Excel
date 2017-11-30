@@ -202,4 +202,7 @@ Private Sub Shortcuts()
     Application.OnKey "^h", "Header"
     Application.OnKey "^j", "Adjust_cols"
     Application.OnKey "^w", "format"
+    Application.OnKey "^g", "delete_sheet"
 End Sub
+
+
