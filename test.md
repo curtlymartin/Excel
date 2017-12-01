@@ -196,5 +196,21 @@ Sub Clear_Range_End()
     ActiveWorkbook.Save
 End Sub
 
+### This one needs to be placed in /[personal.xslb/] VBA /[This Workbook/]
+
+[//]: # (This may be the most platform independent comment)
+
+[//]: # ![alt text](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 1")
+
+![VBA](https://github.com/curtlymartin/Excel/blob/master/11_43_15_Microsoft%20Visual%20Basic%20for%20Applications%20-%20PERSONAL.XLSB%20-%20%5BThisWorkbook%20(Code)%5D_000119.png "Where to paste in personal.xslb VBA")
+
+Private Sub Shortcuts()
+    Application.OnKey "^m", "SelectAdjacentCol"
+    Application.OnKey "^k", "Clear_Range_End"
+    Application.OnKey "^h", "Header"
+    Application.OnKey "^j", "Adjust_cols"
+    Application.OnKey "^w", "format"
+    Application.OnKey "^g", "delete_sheet"
+End Sub
 
 
