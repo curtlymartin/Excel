@@ -1,13 +1,7 @@
 ```VBnet
-Sub Fill_Blank_Cells()
-'Fills adjacent blank cells
-Selection.SpecialCells(xlCellTypeBlanks).Select
-Selection.FormulaR1C1 = "=R[-1]C"
-End Sub
-```
-```VBnet
 Sub Format_PTFields()
 'Macro goal: allow users to quickly choose the format to apply to pivot table fields
+'No keyboard shortcut assigned
 'Code modified from Dick Kusleika's code at:
 'http://www.dailydoseofexcel.com/archives/2010/06/18/formatting-pivot-tables/
 
@@ -84,6 +78,14 @@ Sub SelectAdjacentCol()
 End Sub
 ```
 ```VBnet
+Sub Fill_Blank_Cells()
+'Fills all blank cells in the whole range. Can't exactly remember why this is useful now. Shrug
+'No keyboard shortcut assigned
+Selection.SpecialCells(xlCellTypeBlanks).Select
+Selection.FormulaR1C1 = "=R[-1]C"
+End Sub
+```
+```VBnet
 Sub format()
 ' format Macro - sets font and size to be same for whole sheet
 ' Keyboard Shortcut: Ctrl+w
@@ -134,7 +136,6 @@ Sub Adjust_cols()
     Range("A1").Select
 End Sub
 ```
-
 ```VBnet
 Sub Header()
 ' Header Macro - sets header row to slighter larger font. White font on black background.
@@ -212,4 +213,3 @@ Private Sub Shortcuts()
     Application.OnKey "^g", "delete_sheet"
 End Sub
 ```
-
