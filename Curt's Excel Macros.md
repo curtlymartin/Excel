@@ -198,7 +198,7 @@ Sub Clear_Range_End()
     ActiveWorkbook.Save
 End Sub
 ```
-### This one needs to be placed in [personal.xslb] VBA [This Workbook/
+### This one needs to be placed in [personal.xslb] VBA [This Workbook] and change the letters to whatever may suit you best.
 
 ![VBA](https://github.com/curtlymartin/Excel/blob/master/11_43_15_Microsoft%20Visual%20Basic%20for%20Applications%20-%20PERSONAL.XLSB%20-%20%5BThisWorkbook%20(Code)%5D_000119.png "Where to paste in personal.xslb VBA")
 
