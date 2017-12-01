@@ -1,12 +1,11 @@
-:::VBnet
-
+```VBnet
 Sub Fill_Blank_Cells()
 'Fills adjacent blank cells
 Selection.SpecialCells(xlCellTypeBlanks).Select
 Selection.FormulaR1C1 = "=R[-1]C"
 End Sub
-
-
+```
+```VBnet
 Sub Format_PTFields()
 'Macro goal: allow users to quickly choose the format to apply to pivot table fields
 'Code modified from Dick Kusleika's code at:
@@ -60,8 +59,8 @@ HandleErr:
     GoTo ExitSub
 
 End Sub
-
-
+```
+```VBnet
 'Selects all empty rows of adjacent column. Handy when there's no endpoint to a column in order to do an easy autofill
 Sub SelectAdjacentCol()
 ' Keyboard Shortcut: Ctrl+m
@@ -83,8 +82,8 @@ Sub SelectAdjacentCol()
     End If
 
 End Sub
-
-
+```
+```VBnet
 Sub format()
 ' format Macro - sets font and size to be same for whole sheet
 ' Keyboard Shortcut: Ctrl+w
@@ -118,8 +117,8 @@ Sub format()
         .ThemeFont = xlThemeFontNone
     End With
 End Sub
-
-
+```
+```VBnet
 Sub Adjust_cols()
 ' Adjust_cols Macro - sets column to size of max text
 ' Keyboard Shortcut: Ctrl+j
@@ -134,9 +133,9 @@ Sub Adjust_cols()
     Selection.Columns.AutoFit
     Range("A1").Select
 End Sub
+```
 
-
-
+```VBnet
 Sub Header()
 ' Header Macro - sets header row to slighter larger font. White font on black background.
 ' Keyboard Shortcut: Ctrl+h
@@ -182,7 +181,8 @@ Sub Header()
     Selection.End(xlToLeft).Select
     
 End Sub
-
+```
+```VBnet
 Sub delete_sheet()
 ' deletes current sheet
     ActiveWindow.SelectedSheets.Delete
@@ -197,12 +197,12 @@ Sub Clear_Range_End()
     ActiveSheet.UsedRange
     ActiveWorkbook.Save
 End Sub
-
-### This one needs to be placed in /[personal.xslb/] VBA /[This Workbook/]
+```
+### This one needs to be placed in [personal.xslb] VBA [This Workbook/
 
 ![VBA](https://github.com/curtlymartin/Excel/blob/master/11_43_15_Microsoft%20Visual%20Basic%20for%20Applications%20-%20PERSONAL.XLSB%20-%20%5BThisWorkbook%20(Code)%5D_000119.png "Where to paste in personal.xslb VBA")
 
-
+```VBnet
 Private Sub Shortcuts()
     Application.OnKey "^m", "SelectAdjacentCol"
     Application.OnKey "^k", "Clear_Range_End"
@@ -211,5 +211,5 @@ Private Sub Shortcuts()
     Application.OnKey "^w", "format"
     Application.OnKey "^g", "delete_sheet"
 End Sub
-
+```
 
