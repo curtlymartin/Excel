@@ -55,8 +55,8 @@ HandleErr:
 End Sub
 ```
 ```VBnet
-'Selects all empty rows of adjacent column. Handy when there's no endpoint to a column in order to do an easy autofill
 Sub SelectAdjacentCol()
+'Selects all empty rows of adjacent column. Handy when there's no endpoint to a column in order to do an easy autofill
 ' Keyboard Shortcut: Ctrl+m
 'Application.OnKey "^m", "SelectAdjacentCol"
     Dim rAdjacent As Range
@@ -74,7 +74,6 @@ Sub SelectAdjacentCol()
             End If
         End If
     End If
-
 End Sub
 ```
 ```VBnet
@@ -125,7 +124,6 @@ Sub Adjust_cols()
 ' Adjust_cols Macro - sets column to size of max text
 ' Keyboard Shortcut: Ctrl+j
 'Application.OnKey "^j", "Adjust_cols"
-
     Range(Selection, ActiveCell.SpecialCells(xlLastCell)).Select
     ActiveCell.Columns("A:A").EntireColumn.EntireColumn.AutoFit
     Range("A1").Select
@@ -190,7 +188,8 @@ Sub delete_sheet()
 ' Keyboard Shortcut: Ctrl+g
     'Application.OnKey "^g", "delete_sheet"
 End Sub
-
+```
+```VBnet
 Sub Clear_Range_End()
 ' Clear_Range_End Macro - finds end of range and resets it to current last row of actual data.
 ' Keyboard Shortcut: Ctrl+k
