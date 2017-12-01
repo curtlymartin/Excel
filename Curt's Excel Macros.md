@@ -210,5 +210,6 @@ Private Sub Shortcuts()
     Application.OnKey "^j", "Adjust_cols"
     Application.OnKey "^w", "format"
     Application.OnKey "^g", "delete_sheet"
+    Application.OnKey "^l", "Format_PTFields"
 End Sub
 ```
