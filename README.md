@@ -5,4 +5,4 @@
 Copy and Paste into a new module in VB.
 You may want to change the keyboard shortcuts to suit your preference.
 
-
+.
