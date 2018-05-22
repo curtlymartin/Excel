@@ -54,7 +54,9 @@ HandleErr:
 
 End Sub
 ```
+
 ```VBnet
+
 Sub SelectAdjacentCol()
 'Selects all empty rows of adjacent column. Handy when there's no endpoint to a column in order to do an easy autofill
 ' Keyboard Shortcut: Ctrl+m
@@ -75,16 +77,22 @@ Sub SelectAdjacentCol()
         End If
     End If
 End Sub
+
 ```
+
 ```VBnet
+
 Sub Fill_Blank_Cells()
 'Fills all blank cells in the whole range. Can't exactly remember why this is useful now. Shrug
 'No keyboard shortcut assigned
 Selection.SpecialCells(xlCellTypeBlanks).Select
 Selection.FormulaR1C1 = "=R[-1]C"
 End Sub
+
 ```
+
 ```VBnet
+
 Sub format()
 ' format Macro - sets font and size to be same for whole sheet
 ' Keyboard Shortcut: Ctrl+w
@@ -118,8 +126,11 @@ Sub format()
         .ThemeFont = xlThemeFontNone
     End With
 End Sub
+
 ```
+
 ```VBnet
+
 Sub Adjust_cols()
 ' Adjust_cols Macro - sets column to size of max text
 ' Keyboard Shortcut: Ctrl+j
@@ -133,7 +144,9 @@ Sub Adjust_cols()
     Selection.Columns.AutoFit
     Range("A1").Select
 End Sub
+
 ```
+
 ```VBnet
 Sub Header()
 ' Header Macro - sets header row to slighter larger font. White font on black background.
@@ -178,18 +191,24 @@ Sub Header()
     End With
     Selection.Columns.AutoFit
     Selection.End(xlToLeft).Select
-    
+
 End Sub
+
 ```
+
 ```VBnet
+
 Sub delete_sheet()
 ' deletes current sheet
     ActiveWindow.SelectedSheets.Delete
 ' Keyboard Shortcut: Ctrl+g
     'Application.OnKey "^g", "delete_sheet"
 End Sub
+
 ```
+
 ```VBnet
+
 Sub Clear_Range_End()
 ' Clear_Range_End Macro - finds end of range and resets it to current last row of actual data.
 ' Keyboard Shortcut: Ctrl+k
@@ -198,7 +217,8 @@ Sub Clear_Range_End()
     ActiveWorkbook.Save
 End Sub
 ```
-### This one needs to be placed in [personal.xslb] VBA [This Workbook] and change the letters to whatever may suit you best.
+
+### This one needs to be placed in [personal.xslb] VBA [This Workbook] and change the letters to whatever may suit you best
 
 ![VBA](https://github.com/curtlymartin/Excel/blob/master/11_43_15_Microsoft%20Visual%20Basic%20for%20Applications%20-%20PERSONAL.XLSB%20-%20%5BThisWorkbook%20(Code)%5D_000119.png "Where to paste in personal.xslb VBA")
 
