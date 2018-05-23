@@ -1,3 +1,1 @@
----
-title: Blogging Like a Hacker
----
+# Hi
